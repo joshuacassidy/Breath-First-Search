@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BreathFirstSearch {
+public class BreathFirstSearch<T> {
 
     public String search(Vertex root) {
         String searchResults= "";
@@ -10,7 +10,7 @@ public class BreathFirstSearch {
         queue.add(root);
 
         while (!queue.isEmpty()) {
-            Vertex actualVertex = queue.remove();
+            Vertex<T> actualVertex = queue.remove();
             searchResults+=actualVertex+ " ";
             for (Vertex v: actualVertex.getNeighbourList()) {
                 if(!v.isVisited()) {

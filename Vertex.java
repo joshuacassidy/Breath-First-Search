@@ -1,18 +1,18 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Vertex {
+public class Vertex<T> {
 
-    private int data;
+    private T data;
     private boolean visited;
     private List<Vertex> neighbourList;
 
-    public Vertex(int data) {
+    public Vertex(T data) {
         this.data = data;
         this.neighbourList = new ArrayList<>();
     }
 
-    public int getData() {
+    public T getData() {
         return data;
     }
 
@@ -33,7 +33,7 @@ public class Vertex {
         return data + "";
     }
 
-    public void setData(int data) {
+    public void setData(T data) {
         this.data = data;
     }
 
